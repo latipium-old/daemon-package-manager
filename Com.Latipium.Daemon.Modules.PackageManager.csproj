@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{78523371-9E06-4734-B1FA-B66FC4576EE6}</ProjectGuid>
-    <RootNamespace>Com.Latipium.Template</RootNamespace>
+    <ProjectGuid>{D52E5843-1BA3-4BB0-A219-1CD840CA2A16}</ProjectGuid>
+    <RootNamespace>Com.Latipium.Daemon.Modules.PackageManager</RootNamespace>
     <CustomCommands>
       <CustomCommands>
         <Command type="Custom" name="Authorize CI" command="&quot;$(SolutionDir)/packages/CommandWrapper.2.2/bin/command-wrapper.exe&quot; WRAPPER_NUGET=true WRAPPER_ASK=3 -- &quot;$(SolutionDir)/packages/Com.Latipium.DevTools.1.2.2.2/bin/Com.Latipium.DevTools.exe&quot; authorize -C &quot;$(ProjectDir)&quot; &quot;Please enter your NuGet.org API key:&quot;" workingdir="$(SolutionDir)/packages/Com.Latipium.DevTools.1.2.2.2/" />
@@ -12,7 +12,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Exe</OutputType>
-    <AssemblyName>Com.Latipium.Template</AssemblyName>
+    <AssemblyName>Com.Latipium.Daemon.Modules.PackageManager</AssemblyName>
     <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <Import Project="Com.Latipium.Template.xml" />
@@ -42,12 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Com.Latipium.Core">
-      <HintPath>$(SolutionDir)\packages\Com.Latipium.Core.0.0.16.3\lib\net45\Com.Latipium.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>$(SolutionDir)\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
